@@ -99,6 +99,8 @@ namespace DriverExploits
                                 g_OffsetProcessId = 0x2E0;
                                 g_OffsetProcessLinks = 0x2E8;
                                 g_OffsetObjectTable = 0x418;
+                                g_ImageName = 0x450;
+                                g_SectionBaseAddress = 0x03C0;
                                 break;
 
                             default:
