@@ -42,11 +42,11 @@ namespace PUBGTEST
                 ulong pGNames = 0;
                 Vector3 localPos = new Vector3(0, 0, 0);
 
-                UInt32 pGNamesOffset = DriverExploits.ElevateHandle.Driver.ReadPhysicalAddress<UInt32>(procInfo.DirectoryBase, G.procInfo.SectionBaseAddress + 0x9CA703 + 3);
-                UInt32 pUWorldOffset = DriverExploits.ElevateHandle.Driver.ReadPhysicalAddress<UInt32>(procInfo.DirectoryBase, G.procInfo.SectionBaseAddress + 0x1658229 + 3);
+                UInt32 pGNamesOffset = DriverExploits.ElevateHandle.Driver.ReadPhysicalAddress<UInt32>(procInfo.DirectoryBase, procInfo.SectionBaseAddress + 0x9CA703 + 3);
+                UInt32 pUWorldOffset = DriverExploits.ElevateHandle.Driver.ReadPhysicalAddress<UInt32>(procInfo.DirectoryBase, procInfo.SectionBaseAddress + 0x1658229 + 3);
 
-                pGNames = DriverExploits.ElevateHandle.Driver.ReadPhysicalAddress<ulong>(procInfo.DirectoryBase, G.procInfo.SectionBaseAddress + pGNamesOffset + 0x9CA703 + 3 + 4);
-                pUWorld = DriverExploits.ElevateHandle.Driver.ReadPhysicalAddress<ulong>(procInfo.DirectoryBase, G.procInfo.SectionBaseAddress + pUWorldOffset + 0x1658229 + 3 + 4);
+                pGNames = DriverExploits.ElevateHandle.Driver.ReadPhysicalAddress<ulong>(procInfo.DirectoryBase, procInfo.SectionBaseAddress + pGNamesOffset + 0x9CA703 + 3 + 4);
+                pUWorld = DriverExploits.ElevateHandle.Driver.ReadPhysicalAddress<ulong>(procInfo.DirectoryBase, procInfo.SectionBaseAddress + pUWorldOffset + 0x1658229 + 3 + 4);
                 if (pUWorld > 0)
                 {
                     pGameInstance = DriverExploits.ElevateHandle.Driver.ReadPhysicalAddress<ulong>(procInfo.DirectoryBase, pUWorld + 0x140);

@@ -22,7 +22,5 @@ namespace PUBGTEST
         public static UGameInstance OwningGameInstance { get; set; }
 
         public static string[] Names { get; set; }
-
-        public static Loadlibrayy.Natives.NT.ProcessContext procInfo { get; set; }
     }
 }
