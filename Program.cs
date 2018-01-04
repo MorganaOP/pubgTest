@@ -123,6 +123,7 @@ namespace PUBGTEST
                     }
                }
 
+                Console.WriteLine("SectionBaseAddress" + string.Format("0x{0:X}", procInfo.SectionBaseAddress));
                 Console.WriteLine("pUWorld" + string.Format("0x{0:X}", pUWorld));
                 Console.WriteLine("pGameInstance" + string.Format("0x{0:X}", pGameInstance));
                 Console.WriteLine("pLocalPlayerArray" + string.Format("0x{0:X}", pLocalPlayerArray));
